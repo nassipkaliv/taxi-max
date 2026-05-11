@@ -72,6 +72,22 @@ export default function Hero() {
 
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-ink-100 pt-6">
               <a
+                href={contacts.phoneRuLink}
+                className="group flex items-center gap-3"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-full border border-sun-200 bg-sun-50 text-sun-600 transition group-hover:bg-sun-100">
+                  <Icon name="phone" className="h-5 w-5" />
+                </div>
+                <div className="leading-tight">
+                  <div className="text-[11px] uppercase tracking-widest text-zinc-500">
+                    Россия
+                  </div>
+                  <div className="font-display text-base font-bold text-ink-900">
+                    {contacts.phoneRu}
+                  </div>
+                </div>
+              </a>
+              <a
                 href={contacts.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"

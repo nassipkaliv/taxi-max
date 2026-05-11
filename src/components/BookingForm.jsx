@@ -53,6 +53,20 @@ export default function BookingForm() {
 
               <div className="relative mt-10 space-y-3">
                 <a
+                  href={contacts.phoneRuLink}
+                  className="flex items-center gap-3 rounded-2xl bg-white/40 px-4 py-3 backdrop-blur transition hover:bg-white/60"
+                >
+                  <Icon name="phone" className="h-5 w-5" />
+                  <div className="flex-1">
+                    <div className="text-[10px] uppercase tracking-widest opacity-70">
+                      Россия · звонок
+                    </div>
+                    <div className="font-display font-bold">
+                      {contacts.phoneRu}
+                    </div>
+                  </div>
+                </a>
+                <a
                   href={contacts.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"

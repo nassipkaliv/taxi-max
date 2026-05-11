@@ -5,6 +5,13 @@ export default function StickyCall() {
   return (
     <div className="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-3">
       <a
+        href={contacts.phoneRuLink}
+        aria-label="Позвонить в Россию"
+        className="group relative flex h-12 w-12 items-center justify-center rounded-full bg-sun-500 text-white shadow-[0_10px_30px_-5px_rgba(245,163,0,0.5)] transition hover:scale-110"
+      >
+        <Icon name="phone" className="h-6 w-6" />
+      </a>
+      <a
         href={contacts.telegramLink}
         target="_blank"
         rel="noopener noreferrer"

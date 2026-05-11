@@ -69,16 +69,35 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden items-center gap-3 md:flex">
-            <a
-              href={`tel:${contacts.whatsappRaw}`}
-              className="hidden text-right lg:block"
-            >
-              <div className="text-[11px] uppercase tracking-widest text-zinc-500">24/7</div>
-              <div className="font-display text-sm font-bold text-ink-900">
-                {contacts.whatsapp}
-              </div>
-            </a>
+          <div className="hidden items-center gap-4 md:flex">
+            <div className="hidden flex-col items-end gap-0.5 lg:flex">
+              <a
+                href={contacts.phoneRuLink}
+                className="group flex items-center gap-2"
+              >
+                <Icon name="phone" className="h-3.5 w-3.5 text-sun-600" />
+                <span className="text-[10px] font-semibold uppercase tracking-widest text-zinc-500">
+                  Россия
+                </span>
+                <span className="font-display text-sm font-bold text-ink-900 group-hover:text-sun-700">
+                  {contacts.phoneRu}
+                </span>
+              </a>
+              <a
+                href={contacts.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2"
+              >
+                <Icon name="whatsapp" className="h-3.5 w-3.5 text-[#25D366]" />
+                <span className="text-[10px] font-semibold uppercase tracking-widest text-zinc-500">
+                  Казахстан
+                </span>
+                <span className="font-display text-sm font-bold text-ink-900 group-hover:text-sun-700">
+                  {contacts.whatsapp}
+                </span>
+              </a>
+            </div>
             <a
               href={contacts.whatsappLink}
               target="_blank"
@@ -182,6 +201,24 @@ export default function Header() {
           {/* Bottom CTA */}
           <div className="shrink-0 border-t border-ink-100 bg-white/60 px-4 py-5 backdrop-blur sm:px-6">
             <div className="grid gap-3">
+              <a
+                href={contacts.phoneRuLink}
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-between rounded-2xl bg-gradient-to-r from-sun-400 to-sun-500 px-5 py-3.5 text-ink-900 shadow-[0_10px_30px_-10px_rgba(245,163,0,0.5)] transition hover:scale-[1.02]"
+              >
+                <span className="flex items-center gap-3">
+                  <Icon name="phone" className="h-6 w-6" />
+                  <span className="text-left leading-tight">
+                    <span className="block text-[11px] font-semibold uppercase tracking-widest opacity-80">
+                      Россия · звонок
+                    </span>
+                    <span className="font-display text-base font-bold">
+                      {contacts.phoneRu}
+                    </span>
+                  </span>
+                </span>
+                <Icon name="arrow" className="h-5 w-5 opacity-80" />
+              </a>
               <a
                 href={contacts.whatsappLink}
                 target="_blank"

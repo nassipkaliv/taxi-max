@@ -2,5 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://taxi-max.ru/sitemap.xml
-Host: taxi-max.ru
+Sitemap: https://taximax.kz/sitemap.xml
+Host: taximax.kz

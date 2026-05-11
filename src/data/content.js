@@ -7,6 +7,9 @@ export const brand = {
 }
 
 export const contacts = {
+  phoneRu: '+7 937 200-65-94',
+  phoneRuRaw: '79372006594',
+  phoneRuLink: 'tel:+79372006594',
   whatsapp: '+7 702 876-25-84',
   whatsappRaw: '77028762584',
   whatsappLink: 'https://wa.me/77028762584',

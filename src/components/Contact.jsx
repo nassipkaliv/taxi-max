@@ -16,7 +16,15 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-3xl gap-5 sm:grid-cols-2">
+        <div className="mx-auto mt-14 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <ContactCard
+            icon="phone"
+            label="Россия · звонок"
+            value={contacts.phoneRu}
+            href={contacts.phoneRuLink}
+            cta="Позвонить"
+            accent="amber"
+          />
           <ContactCard
             icon="whatsapp"
             label="WhatsApp"
@@ -52,6 +60,13 @@ export default function Contact() {
 }
 
 const accents = {
+  amber: {
+    bg: 'bg-sun-50',
+    text: 'text-sun-700',
+    ring: 'ring-sun-200',
+    border: 'hover:border-sun-400',
+    icon: 'text-sun-600',
+  },
   emerald: {
     bg: 'bg-emerald-50',
     text: 'text-emerald-700',
@@ -70,11 +85,12 @@ const accents = {
 
 function ContactCard({ icon, label, value, href, cta, accent = 'emerald' }) {
   const c = accents[accent]
+  const isExternal = href?.startsWith('http')
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
       className={`group flex flex-col gap-4 rounded-3xl border border-ink-100 bg-white p-6 shadow-soft transition hover:-translate-y-1 ${c.border}`}
     >
       <div

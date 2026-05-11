@@ -25,6 +25,13 @@ export default function Footer() {
             </p>
             <div className="mt-6 flex items-center gap-3">
               <a
+                href={contacts.phoneRuLink}
+                aria-label="Позвонить"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-ink-200 bg-white text-sun-600 transition hover:border-sun-400 hover:bg-sun-50"
+              >
+                <Icon name="phone" className="h-5 w-5" />
+              </a>
+              <a
                 href={contacts.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -63,6 +70,12 @@ export default function Footer() {
               Контакты
             </div>
             <ul className="mt-4 space-y-3 text-sm text-ink-900/65">
+              <li>
+                <a href={contacts.phoneRuLink} className="hover:text-sun-700">
+                  {contacts.phoneRu}
+                </a>
+                <div className="text-xs text-ink-900/40">Россия · звонок</div>
+              </li>
               <li>
                 <a
                   href={contacts.whatsappLink}
