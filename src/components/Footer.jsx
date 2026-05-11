@@ -9,20 +9,14 @@ export default function Footer() {
       <div className="container-x py-14">
         <div className="grid gap-10 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <a href="#top" className="flex items-center gap-2.5">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-sun-300 to-sun-500 shadow-sun">
-                <span className="font-display text-lg font-extrabold text-ink-900">
-                  M
-                </span>
-              </div>
-              <div className="leading-tight">
-                <div className="font-display text-lg font-extrabold tracking-tight text-ink-900">
-                  {brand.name}
-                </div>
-                <div className="text-xs uppercase tracking-widest text-sun-600">
-                  {brand.tagline}
-                </div>
-              </div>
+            <a href="#top" className="inline-flex items-center">
+              <img
+                src="/logo.png"
+                alt={`${brand.name} — ${brand.tagline}`}
+                className="h-16 w-auto sm:h-20"
+                width="220"
+                height="165"
+              />
             </a>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-ink-900/60">
               Междугороднее такси Уральск — Самара — Казань. Комфортные

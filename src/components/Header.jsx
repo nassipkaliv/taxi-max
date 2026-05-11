@@ -46,19 +46,15 @@ export default function Header() {
             : 'bg-transparent'
         }`}
       >
-        <div className="container-x flex h-16 items-center justify-between md:h-20">
-          <a href="#top" className="group flex items-center gap-2.5">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-sun-300 to-sun-500 shadow-sun">
-              <span className="font-display text-lg font-extrabold text-ink-900">M</span>
-            </div>
-            <div className="leading-tight">
-              <div className="font-display text-base font-extrabold tracking-tight text-ink-900">
-                {brand.name}
-              </div>
-              <div className="text-[11px] uppercase tracking-widest text-sun-600">
-                {brand.tagline}
-              </div>
-            </div>
+        <div className="container-x flex h-20 items-center justify-between md:h-24">
+          <a href="#top" className="flex items-center">
+            <img
+              src="/logo.png"
+              alt={`${brand.name} — ${brand.tagline}`}
+              className="h-14 w-auto sm:h-16 md:h-20"
+              width="200"
+              height="150"
+            />
           </a>
 
           <nav className="hidden items-center gap-7 lg:flex">
@@ -131,23 +127,19 @@ export default function Header() {
           }`}
         >
           {/* Top bar */}
-          <div className="flex h-16 shrink-0 items-center justify-between border-b border-ink-100 px-4 sm:px-6">
+          <div className="flex h-20 shrink-0 items-center justify-between border-b border-ink-100 px-4 sm:px-6">
             <a
               href="#top"
               onClick={() => setOpen(false)}
-              className="flex items-center gap-2.5"
+              className="flex items-center"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-sun-300 to-sun-500 shadow-sun">
-                <span className="font-display text-lg font-extrabold text-ink-900">M</span>
-              </div>
-              <div className="leading-tight">
-                <div className="font-display text-base font-extrabold tracking-tight text-ink-900">
-                  {brand.name}
-                </div>
-                <div className="text-[11px] uppercase tracking-widest text-sun-600">
-                  {brand.tagline}
-                </div>
-              </div>
+              <img
+                src="/logo.png"
+                alt={`${brand.name} — ${brand.tagline}`}
+                className="h-14 w-auto sm:h-16"
+                width="200"
+                height="150"
+              />
             </a>
             <button
               onClick={() => setOpen(false)}
