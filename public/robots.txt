@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://taxi-max.ru/sitemap.xml
+Host: taxi-max.ru
