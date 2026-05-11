@@ -33,7 +33,7 @@ export default function Hero() {
               <span className="block text-[2.75rem] sm:inline sm:text-5xl md:text-6xl lg:text-7xl">
                 Такси
               </span>{' '}
-              <span className="mt-2 block whitespace-nowrap text-[1.375rem] sm:mt-0 sm:inline sm:whitespace-normal sm:text-5xl md:text-6xl lg:text-7xl">
+              <span className="mt-2 block whitespace-nowrap text-xl sm:mt-0 sm:inline sm:whitespace-normal sm:text-5xl md:text-6xl lg:text-7xl">
                 <span className="bg-gradient-to-r from-sun-500 via-sun-400 to-sun-600 bg-clip-text text-transparent">
                   Уральск
                 </span>{' '}
