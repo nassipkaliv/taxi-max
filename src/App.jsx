@@ -1,33 +1,32 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Stats from './components/Stats'
-import Advantages from './components/Advantages'
-import Routes from './components/Routes'
-import Fleet from './components/Fleet'
-import HowItWorks from './components/HowItWorks'
-import BookingForm from './components/BookingForm'
-import FAQ from './components/FAQ'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import StickyCall from './components/StickyCall'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+import HomePage from './components/HomePage'
+import RoutePage from './components/RoutePage'
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    if (hash) {
+      // Small delay so the target element is rendered after route switch
+      setTimeout(() => {
+        const el = document.querySelector(hash)
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 50)
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' })
+    }
+  }, [pathname, hash])
+  return null
+}
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-ink-900">
-      <Header />
-      <main>
-        <Hero />
-        <Stats />
-        <Advantages />
-        <Routes />
-        <Fleet />
-        <HowItWorks />
-        <BookingForm />
-        <FAQ />
-        <Contact />
-      </main>
-      <Footer />
-      <StickyCall />
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/:slug" element={<RoutePage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }

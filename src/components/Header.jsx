@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { brand, contacts } from '../data/content'
 import Icon from './Icon'
 
 const nav = [
-  { href: '#advantages', label: 'Преимущества' },
-  { href: '#routes', label: 'Маршруты' },
-  { href: '#fleet', label: 'Автопарк' },
-  { href: '#booking', label: 'Заказ' },
-  { href: '#faq', label: 'Вопросы' },
-  { href: '#contact', label: 'Контакты' },
+  { href: '/#advantages', label: 'Преимущества' },
+  { href: '/#routes', label: 'Маршруты' },
+  { href: '/#fleet', label: 'Автопарк' },
+  { href: '/#booking', label: 'Заказ' },
+  { href: '/#faq', label: 'Вопросы' },
+  { href: '/#contact', label: 'Контакты' },
 ]
 
 export default function Header() {
@@ -47,7 +48,7 @@ export default function Header() {
         }`}
       >
         <div className="container-x flex h-20 items-center justify-between md:h-24">
-          <a href="#top" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img
               src="/logo.png"
               alt={`${brand.name} — ${brand.tagline}`}
@@ -55,17 +56,17 @@ export default function Header() {
               width="200"
               height="150"
             />
-          </a>
+          </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">
             {nav.map((item) => (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
+                to={item.href}
                 className="text-sm font-medium text-ink-900/70 transition hover:text-sun-600"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -147,8 +148,8 @@ export default function Header() {
         >
           {/* Top bar */}
           <div className="flex h-20 shrink-0 items-center justify-between border-b border-ink-100 px-4 sm:px-6">
-            <a
-              href="#top"
+            <Link
+              to="/"
               onClick={() => setOpen(false)}
               className="flex items-center"
             >
@@ -159,7 +160,7 @@ export default function Header() {
                 width="200"
                 height="150"
               />
-            </a>
+            </Link>
             <button
               onClick={() => setOpen(false)}
               className="flex h-10 w-10 items-center justify-center rounded-xl border border-ink-100 bg-white text-ink-900 transition hover:border-sun-300"
@@ -182,8 +183,8 @@ export default function Header() {
                   }}
                   className={open ? 'animate-fade-up' : 'opacity-0'}
                 >
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     onClick={() => setOpen(false)}
                     className="group flex items-center justify-between rounded-2xl px-4 py-4 text-2xl font-display font-bold text-ink-900 transition hover:bg-white hover:text-sun-700"
                   >
@@ -192,7 +193,7 @@ export default function Header() {
                       name="arrow"
                       className="h-5 w-5 text-ink-900/30 transition group-hover:translate-x-1 group-hover:text-sun-500"
                     />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

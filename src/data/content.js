@@ -60,6 +60,7 @@ export const advantages = [
 
 export const routes = [
   {
+    slug: 'uralsk-samara',
     from: 'Уральск',
     to: 'Самара',
     distance: '360 км',
@@ -71,6 +72,7 @@ export const routes = [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Volga-river-samara-001-june-2016-russia.jpg/1280px-Volga-river-samara-001-june-2016-russia.jpg',
   },
   {
+    slug: 'samara-uralsk',
     from: 'Самара',
     to: 'Уральск',
     distance: '360 км',
@@ -82,6 +84,7 @@ export const routes = [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Kazakhstan_Uralsk_railway_station.jpg/1280px-Kazakhstan_Uralsk_railway_station.jpg',
   },
   {
+    slug: 'uralsk-kurumoch',
     from: 'Уральск',
     to: 'Аэропорт Курумоч',
     distance: '320 км',
@@ -92,6 +95,7 @@ export const routes = [
       'https://upload.wikimedia.org/wikipedia/commons/0/01/Kurumoch_International_Airport_1.png',
   },
   {
+    slug: 'uralsk-kazan',
     from: 'Уральск',
     to: 'Казань',
     distance: '830 км',

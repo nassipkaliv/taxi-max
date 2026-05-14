@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { routes, contacts } from '../data/content'
 import Icon from './Icon'
 
@@ -102,10 +103,20 @@ export default function Routes() {
                       </span>
                     </div>
                   </div>
-                  <a href="#booking" className="btn-primary text-sm">
-                    Заказать
-                    <Icon name="arrow" className="h-4 w-4" />
-                  </a>
+                  <div className="flex flex-col items-end gap-2">
+                    {r.slug && (
+                      <Link
+                        to={`/${r.slug}`}
+                        className="text-xs font-semibold text-sun-700 hover:text-sun-600"
+                      >
+                        Подробнее о маршруте →
+                      </Link>
+                    )}
+                    <a href="#booking" className="btn-primary text-sm">
+                      Заказать
+                      <Icon name="arrow" className="h-4 w-4" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>

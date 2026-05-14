@@ -6,23 +6,23 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://taximax.kz/#routes</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://taximax.kz/#fleet</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://taximax.kz/#booking</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://taximax.kz/uralsk-samara</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://taximax.kz/#faq</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://taximax.kz/samara-uralsk</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://taximax.kz/uralsk-kurumoch</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://taximax.kz/uralsk-kazan</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

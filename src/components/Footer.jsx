@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import { brand, contacts } from '../data/content'
+import { routePagesList } from '../data/routePages'
 import Icon from './Icon'
 
 export default function Footer() {
@@ -9,7 +11,7 @@ export default function Footer() {
       <div className="container-x py-14">
         <div className="grid gap-10 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <a href="#top" className="inline-flex items-center">
+            <Link to="/" className="inline-flex items-center">
               <img
                 src="/logo.png"
                 alt={`${brand.name} — ${brand.tagline}`}
@@ -17,7 +19,7 @@ export default function Footer() {
                 width="220"
                 height="165"
               />
-            </a>
+            </Link>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-ink-900/60">
               Междугороднее такси Уральск — Самара — Казань. Комфортные
               поездки 24/7 на автомобилях бизнес-класса. Фиксированная цена,
@@ -54,14 +56,21 @@ export default function Footer() {
 
           <div>
             <div className="font-display text-sm font-bold uppercase tracking-widest text-ink-900">
-              Разделы
+              Маршруты
             </div>
             <ul className="mt-4 space-y-2 text-sm text-ink-900/65">
-              <li><a href="#advantages" className="hover:text-sun-700">Преимущества</a></li>
-              <li><a href="#routes" className="hover:text-sun-700">Маршруты и цены</a></li>
-              <li><a href="#fleet" className="hover:text-sun-700">Автопарк</a></li>
-              <li><a href="#booking" className="hover:text-sun-700">Заказ поездки</a></li>
-              <li><a href="#faq" className="hover:text-sun-700">Вопросы и ответы</a></li>
+              {routePagesList.map((r) => (
+                <li key={r.slug}>
+                  <Link to={`/${r.slug}`} className="hover:text-sun-700">
+                    Такси {r.from} — {r.to}
+                  </Link>
+                </li>
+              ))}
+              <li className="pt-2 border-t border-ink-100 mt-2">
+                <Link to="/#routes" className="text-xs text-ink-900/50 hover:text-sun-700">
+                  Все маршруты и цены →
+                </Link>
+              </li>
             </ul>
           </div>
 
